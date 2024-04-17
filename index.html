@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <main id="app" class="main-content">
+
+
+        <h1>{{ siteName }}</h1>
+        <h2>{{ phrase }}</h2>
+            <!--
+                using the "url" property of the "data" object from our Vue "app" with v-bind to bind it to the "href" attribute
+            -->
+        <p>New in Georgian@Ilac?</p>
+        <p><a :href="url" target="_blank">Visit Georgian@Ilac website</a></p>
+
+
+        <!-- using "data" object from our Vue "app" with v-bind to bind it to display the images -->
+
+        <form id="smoothieForm">
+            <fieldset>
+                <legend>Choose a Smoothie:</legend>
+                <div class="smoothie-option">
+                    <label>
+                        <input type="radio" name="smoothie" value="blueberry">
+                        <img v-bind:src="img_source" alt="Blue Berry">
+                        Blueberry
+                    </label>
+                    <label>
+                        <input type="radio" name="smoothie" value="strawberry">
+                        <img v-bind:src="img_source1" alt="Strawberry">
+                        Strawberry
+                    </label>
+                    <label>
+                        <input type="radio" name="smoothie" value="pineapple">
+                        <img v-bind:src="img_source2" alt="Pineapple">
+                        Pineapple
+                    </label>
+                </div>
+            </fieldset>
+        
+
+            <br>
+
+            <div id="selectSize">
+                <label for="size"><h3>Choose Size:</h3></label>
+                <div class="size-options-container">
+                    <div id="selectSize" class="size-options">
+                        <label for="small">
+                            <input type="radio" id="small" name="size" value="small">
+                            Small ($5.99)
+                        </label>
+                        <label for="medium">
+                            <input type="radio" id="medium" name="size" value="medium" checked>
+                            Medium (+$1.00)
+                        </label>
+                        <label for="large">
+                            <input type="radio" id="large" name="size" value="large">
+                            Large (+$2.00)
+                        </label>
+                    </div>
+                </div>
+                
+                
+            </div>
+            <br>
+
+            <div id="selectQuantity">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1">
+            </div>
+
+            <br>
+
+            <!-- using v-if to ask if the customer want to put toppings on the smoothie   -->
+            <div id="askForToppings">
+                <h3>Would you like to add some toppings?</h3>
+                <p>It's free!</p>
+            </div>
+            
+
+            <span v-if="addTop">
+                <!-- using v-for to show the toppings-->
+                <div id="selectToppings-container">
+                    <div id="selectToppings">
+                        <label><h3>Top Ups:</h3></label>
+                        <ul>
+                            <li v-for="topping in toppings">
+                                <input type="checkbox" name="topping" :value="topping"> <!-- Getting the value from Vue to display in the final order-->
+                                <label>{{ topping }}</label></li>
+                        </ul>
+                    </div>
+                </div>   
+            </span>
+
+           
+
+            <br>
+
+            <button type="button" onclick="createSmoothie()">Submit Order</button>
+        </form>
+
+        <div id="order">
+
+        </div>
+
+    </main>
+    
+    <footer>&copy; <span id="year"></span> - Vue.js Introduction Demo</footer>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script src="script1.js">
+    </script>
+
+    <script>
+        const mountedApp = app.mount('#app');
+    </script>
+</body>
+
+
+</html>

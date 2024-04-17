@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9e8d2; /* Very light orange background color */
+    color: #000; /* Black text color */
+    margin: 0;
+    padding: 0;
+}
+
+.main-content {
+    background-color: #fff; /* White background color for main content */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* Center main content horizontally */
+    max-width: 800px; /* Set maximum width for main content */
+}
+
+h1 {
+    color: #ff6600; /* Orange font color for h1 */
+    text-shadow: 
+        -2px -2px 0 #0056b3,  
+        2px -2px 0 #0056b3,
+        -2px 2px 0 #0056b3,
+        2px 2px 0 #0056b3,
+        0 0 5px #0056b3; /* Dark blue outline with orange interior */
+    background-color: #f9e8d2; /* Very light orange background color */
+    padding: 10px 20px; /* Add padding to give space around the text */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    margin-top: 0; /* Remove default margin */
+    font-family: 'Comic Sans MS', cursive; /* Use a funny font for h1 */
+    text-align: center;
+    font-size: 36px; /* Larger font size for h1 */
+}
+
+h2 {
+    text-align: center;
+    color: #ff6600; /* Orange font color for h2 */
+    text-shadow: -1px -1px 0 #0056b3,  
+                  1px -1px 0 #0056b3,
+                 -1px  1px 0 #0056b3,
+                  1px  1px 0 #0056b3; /* Dark blue outline using text-shadow */
+                  
+}
+
+
+a {
+    color: #007bff; /* Blue color for links */
+}
+
+/* Smoothie options */
+.smoothie-option {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    width: 180px;
+    height: auto;
+    
+}
+
+/* Choose size */
+.size-options-container {
+    display: block; /* Change display to block */
+    margin: 20px auto; /* Center the box horizontally */
+    text-align: center; /* Center the text inside the box */
+}
+
+.size-options {
+    display: inline-block;
+    border: 2px solid #0056b3; /* Dark blue border */
+    border-radius: 5px; /* Rounded corners */
+    text-align: left; /* Reset text alignment to left */
+}
+
+.size-options label {
+    display: block;
+    padding: 10px;
+}
+
+.size-options input[type="radio"] {
+    margin-right: 5px;
+}
+
+
+.askForToppings {
+    text-align: center;
+}
+
+.quantity{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+/* Choose toppings */
+#selectToppings-container {
+    align-items: center;
+    display: block;
+    margin: 20px auto; /* Center the box horizontally */
+    text-align: center; /* Center the text inside the box */
+}
+
+#selectToppings {
+    display: inline-block;
+    border: 2px solid #0056b3; /* Dark blue border */
+    border-radius: 5px; /* Rounded corners */
+    text-align: left; /* Reset text alignment to left */
+    padding: 10px; /* Add padding for spacing */
+}
+
+#selectToppings ul {
+    list-style: none; /* Remove default list styles */
+    padding: 0;
+}
+
+#selectToppings li {
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center items vertically */
+}
+
+#selectToppings label {
+    margin-left: 5px; /* Add some space between the checkbox and the text */
+}
+
+
+
+
+/* Adjust position of checkbox buttons */
+input[type="checkbox"] {
+    margin-right: 5px; /* Adjust the margin to bring the checkbox closer to the label */
+}
+
+button {
+    background-color: #007bff; /* Blue color for buttons */
+    color: #fff; /* White text color for buttons */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #333; /* Dark gray color for footer text */
+}
